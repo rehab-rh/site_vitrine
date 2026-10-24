@@ -1,0 +1,9 @@
+section {
+    max-width: 1000px;
+    margin: 25px auto;
+}
+
+nav a {
+    display: inline-block;
+    padding: 8px;
+}
