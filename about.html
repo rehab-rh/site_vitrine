@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À propos</title>
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        (function () {
+            const theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+            document.documentElement.setAttribute("data-theme", theme);
+        })();
+    </script>
 </head>
 <body>
 
@@ -13,6 +19,7 @@
         <nav>
             <a href="index.html">Accueil</a>
             <a href="about.html">À propos</a>
+            <button id="theme-toggle" type="button">🌙 Mode sombre</button>
         </nav>
     </header>
 
@@ -28,5 +35,6 @@
         <p>Mon Site Vitrine</p>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>

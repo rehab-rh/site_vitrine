@@ -3,6 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <title>site_vitrine</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script>
+            (function () {
+                const theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+                document.documentElement.setAttribute("data-theme", theme);
+            })();
+        </script>
     </head>
     <body>
         <header>Site Vetrine
@@ -12,7 +19,7 @@
                 <a href="#">Services</a>
                 <a href="#">Contact</a>
                 <a href="login.html">Connexion</a>
-
+                <button id="theme-toggle" type="button">🌙 Mode sombre</button>
             </nav>
         </header>
         <main>

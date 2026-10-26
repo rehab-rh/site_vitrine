@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <title>Contact</title>
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        (function () {
+            const theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+            document.documentElement.setAttribute("data-theme", theme);
+        })();
+    </script>
 </head>
 <body>
     <header>
         <h1>Contactez-nous</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <button id="theme-toggle" type="button">🌙 Mode sombre</button>
+        </nav>
     </header>
 
     <main>
@@ -18,5 +28,7 @@
     <footer>
         <p>Mon site vitrine</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
-</html
+</html>
